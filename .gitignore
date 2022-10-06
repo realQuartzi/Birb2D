@@ -69,3 +69,6 @@ _deps
 
 # VS Code
 .vscode/
+
+# Visual Studio
+.vs/

@@ -15,6 +15,8 @@ namespace Birb
 		Rect();
 		Rect(const float& p_x, const float& p_y, const float& p_w, const float& p_h);
 		Rect(const float& p_x, const float& p_y, const float& p_w, const float& p_h, const Color& color);
+		Rect(const Vector2& pos, const Vector2& size);
+		Rect(const Vector2& pos, const Vector2& size, const Color& color);
 
 		std::string toString() const;
 		Polygon toPolygon() const;

@@ -1,6 +1,7 @@
 #include "Rect.hpp"
 #include "Renderwindow.hpp"
 #include "Utils.hpp"
+#include "Vector.hpp"
 
 namespace Birb
 {
@@ -18,6 +19,16 @@ namespace Birb
 
 	Rect::Rect(const float& p_x, const float& p_y, const float& p_w, const float& p_h, const Color& color)
 	:x(p_x), y(p_y), w(p_w), h(p_h), color(color)
+	{}
+
+	Rect::Rect(const Vector2& pos, const Vector2& size)
+	:x(pos.x), y(pos.y), w(size.x), h(size.y)
+	{
+	    color = Color(0xFFFFFF);
+	}
+
+	Rect::Rect(const Vector2& pos, const Vector2& size, const Color& color)
+	:x(pos.x), y(pos.y), w(size.x), h(size.y), color(color)
 	{}
 
 	std::string Rect::toString() const
