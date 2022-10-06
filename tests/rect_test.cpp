@@ -22,6 +22,19 @@ namespace Birb
 		CHECK(customRect.h == 40.6668f);
 	}
 
+	TEST_CASE("Rect with vector arguments")
+	{
+		Vector2 pos = Vector2(10.54f, 20);
+		Vector2 size = Vector2(30.234f, 40.6668f);
+
+		Rect customRect(pos, size);
+
+		CHECK(customRect.x == 10.54f);
+		CHECK(customRect.y == 20);
+		CHECK(customRect.w == 30.234f);
+		CHECK(customRect.h == 40.6668f);
+	}
+
 	TEST_CASE("Rect to string")
 	{
 		Rect rectA(10, 20, 30, 40);
